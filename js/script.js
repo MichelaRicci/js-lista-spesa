@@ -11,11 +11,33 @@ const shoppingList = ['pane', 'olio evo', 'parmigiano', 'zucca', 'rosmarino'];
 console.log(shoppingList);
 
 
+//Prendo elemento dalla pagina
+
+const list = document.getElementById('list');
+
+
+// Inizializzo il contatore
+
 let i = 0;
 
 
+// Creo ul + stampa con while
+
+let ul = "<ul>";
+
 while (i < shoppingList.length) {
     console.log(shoppingList[i]);
+
+    ul += "<li>" + shoppingList[i] + "</li>"
+
     i++;
 
 }
+
+ul += "</ul>";
+
+
+// Stampo in pagina 
+
+list.innerHTML += ul;
+
